@@ -2,7 +2,6 @@
 
 This package provides a way to easily handle sections, programmatically scrolling into other sections and checking whether current section is in viewport or not.
 
-
 ## Scrolling to specified sections
 
 ```tsx
@@ -34,7 +33,7 @@ const ScrollToSectionButton = ({ linkedTo }) => {
 ## Checking if section is in viewport
 
 ```tsx
-const ScrollToSectionButton = ({ linkedTo }) => {
+const AlertIfVisible = () => {
   const { isVisible, index } = useSection();
   useEffect(() => {
     if (isVisible) alert(`Section #${index} is Visible`);
@@ -44,13 +43,13 @@ const ScrollToSectionButton = ({ linkedTo }) => {
 
 <SectionController>
   <Section>
-    <ScrollToSectionButton linkedTo={1} />
+    <AlertIfVisible linkedTo={1} />
   </Section>
   <Section>
-    <ScrollToSectionButton linkedTo={2} />
+    <AlertIfVisible linkedTo={2} />
   </Section>
   <Section>
-    <ScrollToSectionButton linkedTo={0} />
+    <AlertIfVisible linkedTo={0} />
   </Section>
 </SectionController>;
 ```
