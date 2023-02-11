@@ -18,16 +18,16 @@ const ScrollToSectionButton = ({ linkedTo }) => {
 };
 
 <SectionController>
-	<Section>
-		<ScrollToSectionButton linkedTo={1} />
-	</Section>,
-	<Section>
-		<ScrollToSectionButton linkedTo={2} />
-	</Section>,
-	<Section>
-		<ScrollToSectionButton linkedTo={0} />
-	</Section>
-</SectionController>
+  <Section>
+    <ScrollToSectionButton linkedTo={1} />
+  </Section>
+  <Section>
+    <ScrollToSectionButton linkedTo={2} />
+  </Section>
+  <Section>
+    <ScrollToSectionButton linkedTo={0} />
+  </Section>
+</SectionController>;
 ```
 
 ## Checking if section is in viewport
@@ -35,21 +35,21 @@ const ScrollToSectionButton = ({ linkedTo }) => {
 ```tsx
 const ScrollToSectionButton = ({ linkedTo }) => {
   const { isVisible, index } = useSection();
-	useEffect(() => {
-		if(isVisible) alert(`Section #${index} is Visible`)
-	},[isVisible])
+  useEffect(() => {
+    if (isVisible) alert(`Section #${index} is Visible`);
+  }, [isVisible]);
   return <p>Some text...</p>;
 };
 
 <SectionController>
-	<Section>
-		<ScrollToSectionButton linkedTo={1} />
-	</Section>,
-	<Section>
-		<ScrollToSectionButton linkedTo={2} />
-	</Section>,
-	<Section>
-		<ScrollToSectionButton linkedTo={0} />
-	</Section>
-</SectionController>
+  <Section>
+    <ScrollToSectionButton linkedTo={1} />
+  </Section>
+  <Section>
+    <ScrollToSectionButton linkedTo={2} />
+  </Section>
+  <Section>
+    <ScrollToSectionButton linkedTo={0} />
+  </Section>
+</SectionController>;
 ```
