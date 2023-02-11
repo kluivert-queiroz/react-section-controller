@@ -2,6 +2,7 @@
 
 This package provides a way to easily handle sections, programmatically scrolling into other sections and checking whether current section is in viewport or not.
 
+
 ## Scrolling to specified sections
 
 ```tsx
