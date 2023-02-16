@@ -1,9 +1,11 @@
-import React, { Children, useEffect, useRef } from "react";
+import React, { Children, useRef } from "react";
 import { SectionControllerContext } from "../context";
+import { SectionControllerProps } from "../types";
 import { Section } from "./Section";
 
 export const SectionController = ({
   children,
+  threshold = 0.6,
   ...otherProps
 }: SectionControllerProps) => {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -11,7 +13,6 @@ export const SectionController = ({
   const childrenWithProps = Children.map(children, (child, index) => {
     if (child.type !== Section)
       throw new Error("Only Section can be child of SectionControler.");
-    console.log("##", child);
     return React.cloneElement(child, { index });
   });
   const scrollToIndex = (index: number, args?: ScrollIntoViewOptions) => {
@@ -19,7 +20,7 @@ export const SectionController = ({
   };
 
   return (
-    <SectionControllerContext.Provider value={{ scrollToIndex }}>
+    <SectionControllerContext.Provider value={{ scrollToIndex, threshold }}>
       <div
         className={`sectionController ${otherProps.className}`}
         ref={ref}

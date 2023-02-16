@@ -1,21 +1,23 @@
-interface SectionData {
+export declare interface SectionData {
   isVisible: boolean;
   index: number;
 }
 
-interface SectionControllerProps
+export declare interface SectionControllerProps
   extends React.DetailedHTMLProps<
     React.HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
   > {
   children: React.ReactNode;
+  threshold?: number;
 }
 
-interface SectionProps {
+export declare interface SectionProps {
   children: React.ReactNode | ((sectionData: SectionData) => React.ReactNode);
-  index: number;
+  index?: number;
 }
 
-interface SectionContextType {
+export declare interface SectionContextType {
   scrollToIndex(index: number, args?: ScrollIntoViewOptions): void;
+  threshold: number;
 }

@@ -13,7 +13,8 @@
     "emitDeclarationOnly": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "typeRoots": ["src/types"]
+    "typeRoots": ["src/types"],
+    "rootDir": "src"
   },
   "exclude": [
     "dist",
