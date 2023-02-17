@@ -10,6 +10,7 @@ export declare interface SectionControllerProps
   > {
   children: React.ReactNode;
   threshold?: number;
+  containerRef?: React.LegacyRef<HTMLDivElement> | undefined;
 }
 
 export declare interface SectionProps {
@@ -20,4 +21,5 @@ export declare interface SectionProps {
 export declare interface SectionContextType {
   scrollToIndex(index: number, args?: ScrollIntoViewOptions): void;
   threshold: number;
+  containerRef?: React.RefObject<HTMLDivElement>;
 }

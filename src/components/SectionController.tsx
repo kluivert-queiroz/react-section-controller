@@ -5,7 +5,8 @@ import { Section } from "./Section";
 
 export const SectionController = ({
   children,
-  threshold = 0.6,
+  threshold = 0.51,
+  containerRef,
   ...otherProps
 }: SectionControllerProps) => {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -20,7 +21,9 @@ export const SectionController = ({
   };
 
   return (
-    <SectionControllerContext.Provider value={{ scrollToIndex, threshold }}>
+    <SectionControllerContext.Provider
+      value={{ scrollToIndex, threshold, containerRef }}
+    >
       <div
         className={`sectionController ${otherProps.className}`}
         ref={ref}
