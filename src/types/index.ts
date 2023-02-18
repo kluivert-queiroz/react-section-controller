@@ -10,7 +10,7 @@ export declare interface SectionControllerProps
   > {
   children: React.ReactNode;
   threshold?: number;
-  containerRef?: React.LegacyRef<HTMLDivElement> | undefined;
+  containerRef?: React.RefObject<HTMLDivElement> | null;
 }
 
 export declare interface SectionProps {
