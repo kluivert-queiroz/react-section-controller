@@ -8,7 +8,8 @@
   "scripts": {
     "build": "rollup -c",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "lint": "eslint . --ext .ts"
   },
   "repository": {
     "type": "git",
@@ -41,7 +42,10 @@
     "@storybook/react": "^6.5.16",
     "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.27",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
     "babel-loader": "^8.3.0",
+    "eslint": "^8.34.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^3.15.0",
